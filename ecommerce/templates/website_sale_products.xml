@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Ajout de la description html des catégories en bas de la liste d'articles -->
+<template id="products" inherit_id="website_sale.products" name="Products">
+    <xpath expr="//div[@id='products_grid']" position="inside">
+
+        <t t-if="category">
+            <t t-set="editor_msg">Drag building blocks here to customize the bottom for "<t t-esc="category.name"/>" category.</t>
+            <div id="category_bottom" t-att-data-editor-message="editor_msg" t-field="category.website_description_bottom"/>
+        </t>
+
+    </xpath>
+</template>
+
+</odoo>

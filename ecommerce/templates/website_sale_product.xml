@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Ajout de la description html au dessus des fiches articles -->
+<template id="product" inherit_id="website_sale.product" name="Product">
+    <xpath expr="//section[@id='product_detail']" position="before">
+        <div itemprop="description_top" t-field="product.website_description_top" class="oe_structure oe_empty" id="product_top_description"/>
+    </xpath>
+</template>
+
+</odoo>
